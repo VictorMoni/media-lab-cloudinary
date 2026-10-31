@@ -1,4 +1,5 @@
 import './globals.css';
+import { themeScript } from '../lib/theme.mjs';
 
 export const metadata = {
   title: 'Media Lab | Cloudinary + Next.js',
@@ -6,5 +7,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body>{children}</body></html>;
 }
