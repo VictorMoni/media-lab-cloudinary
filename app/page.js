@@ -1,5 +1,6 @@
 'use client';
 
+import ThemeToggle from './ThemeToggle';
 import { useState } from 'react';
 import { imageUrl, imageSrcSet } from '../lib/cloudinary.mjs';
 
@@ -42,7 +43,7 @@ export default function Home() {
   }
 
   return <>
-    <header className="header"><a href="#" className="brand"><span className="brand-icon">m<span>↗</span></span>media lab<span className="brand-dot">.</span></a><nav aria-label="Main navigation"><a href="#laboratorio">Lab</a><a href="#galeria">Gallery</a><a href="#sobre">About the project <span>↗</span></a></nav><span className="stack">NEXT.JS + CLOUDINARY</span></header>
+    <header className="header"><a href="#" className="brand"><span className="brand-icon">m<span>↗</span></span>media lab<span className="brand-dot">.</span></a><nav aria-label="Main navigation"><a href="#laboratorio">Lab</a><a href="#galeria">Gallery</a><a href="#sobre">About the project <span>↗</span></a></nav><div className="header-tools"><span className="stack">NEXT.JS + CLOUDINARY</span><ThemeToggle /></div></header>
     <main>
       <section className="hero"><div className="eyebrow"><span className="live-dot"/> AN EXPERIMENT WITH THE VISUAL WEB</div><h1>Fewer bytes.<br/><span>More image.</span></h1><div className="hero-bottom"><p>The same file. New possibilities.<br/>Explore how cropping, quality, and format transform image delivery.</p><a className="pill-link" href="#laboratorio">Try the lab <span>↘</span></a></div><div className="hero-number" aria-hidden="true">01 / LAB</div></section>
 
